@@ -1,7 +1,10 @@
 namespace :db do
-  desc "TODO"
+  desc "Import csv files located in db/csv pipeline"
   task import: :environment do
+    require_relative '../models/csv_importer.rb'
+    include CsvImporter
 
+    CsvImporter::import
   end
 
 end
