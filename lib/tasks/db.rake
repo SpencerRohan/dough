@@ -5,8 +5,7 @@ namespace :db do
     include CsvImporter
 
     path = File.expand_path('../../..', __FILE__) + '/db/csv/*'
-    file = Dir[path]
-    CsvImporter::import(file)
+    files = Dir[path]
+    files.each { |file| CsvImporter::import(file) }
   end
-
 end
