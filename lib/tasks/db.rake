@@ -4,7 +4,9 @@ namespace :db do
     require_relative '../models/csv_importer.rb'
     include CsvImporter
 
-    CsvImporter::import
+    path = File.expand_path('../../..', __FILE__) + '/db/csv/*'
+    file = Dir[path]
+    CsvImporter::import(file)
   end
 
 end

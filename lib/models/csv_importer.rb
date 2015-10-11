@@ -1,5 +1,7 @@
 module CsvImporter
-  def import
-    puts "test"
+
+  def import(file)
+    puts file
   end
+
 end
