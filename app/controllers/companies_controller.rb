@@ -9,11 +9,16 @@ class CompaniesController < ApplicationController
   end
 
   def index
-
+    @companies = Company.all.sample(20)
   end
 
-  def show #show graph
-
+  def show
+    @company = Company.find(params[:id])
+    yahoo_client = YahooFinance::Client.new
+    data = yahoo_client.historical_quotes(@company.symbol, { start_date: Time::now-(24*60*60*30), end_date: Time::now })
+    @daily_average = data.map do |day|
+      [day.low.to_f, day.high.to_f, day.open.to_f, day.close.to_f].reduce(:+)/4.0
+    end
   end
 
 end
