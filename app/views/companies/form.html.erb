@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="content">
+    <div class="row">
+      <div class="search-form">
+        <h4>PLEASE ENTER COMPANY NAME OR STOCK SYMBOL</h4>
+          <%= form_tag companies_path, method: :post, :class => "form-inline" do %>
+            <%= text_field_tag :query, params[:query] %>
+            <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+}
+
+body {
+  padding-top: 40px;
+  background: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/bright_squares.png");
+}
+
+.container {
+  width: 300px;
+  text-align: center;
+  background: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/bright_squares.png");
+}
+
+.container > .content {
+  background: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/brushed_alu_dark.png");
+  padding: 20px;
+  margin: 0 -20px;
+}
+
+.search-form {
+
+}
+
+legend {
+  margin-right: -50px;
+  font-weight: bold;
+    color: #404040;
+}
