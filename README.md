@@ -20,6 +20,7 @@ Search for companies by NAME or SYMBOL. Once your selection has been found a gra
 ```
     rails s
 ```
-+ Open browser(Google Chrome recommended) and navigate to http://localhost:3000/
++ Open browser(Google Chrome recommended) and navigate to localhost:3000
+
 ### Quick View
 A version has been uploaded to Heroku and may viewed  [HERE](https://desolate-anchorage-6823.herokuapp.com).
