@@ -13,8 +13,18 @@
             <tbody>
               <% @results.each do |result| %>
                 <tr>
-                  <td><%= result.symbol %></td>
-                  <td><%= result.name %></td>
+                  <td>
+                    <%= link_to result.symbol,
+                          :controller => 'companies',
+                          :action => 'show',
+                          :id => result.id %>
+                  </td>
+                  <td>
+                    <%= link_to result.name,
+                          :controller => 'companies',
+                          :action => 'show',
+                          :id => result.id %>
+                  </td>
                 </tr>
               <% end %>
             </tbody>
